@@ -128,18 +128,19 @@ h4{
 
 .main-container{
    background-color: black;
-   height: calc(100vh - 80px);
+   min-height: calc(100vh - 80px);
    color: #ffffff;
    font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .content-container{   
-    margin-left: 80px;
+    margin-left: 50px;
     
 }
 
-.featured-content{
-    height: 40vh; 
+.featured-content{   
+    
+    
    
      }
 
@@ -167,7 +168,7 @@ h4{
 }
 
 .movie-list-container{
-
+    padding: 20px;
 }
 
 .movie-list-title{
@@ -175,13 +176,21 @@ h4{
 }
 
 .movie-list-wrapper{
+  overflow: hidden;
+    
+}
+
+.movie-list{
     display: flex;
-    flex-direction: row;
+   align-items: center;
+   height: 300px;
+   position: relative; 
+
 }
 
 .movie-list-item{
     margin-left: 50px;
-    position: relative;  
+    
 }
 
 .movie-list-item:hover .movie-img{
@@ -204,14 +213,21 @@ h4{
 }
 
 .movie-title{
-    padding: 10px 0;  
-    position: absolute;
-    width: 100%;
-    top: 100%;
+    padding: 15px 0;       
     display: flex;
     align-items: center;
     justify-content: center;
-    
+}
+
+.movie-arrow{
+
+    font-size: 100px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    color: lightgrey;
+    opacity: .5;
+    cursor: pointer;
 }
 
 
