@@ -2,112 +2,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mardraft Cinema App</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-container">
-            <div class="logo-container">
-               <h1 class="logo">Mardraft<span>Cinema</span></h1>
+    <div class="w-full h-20 bg-zinc-800">
+        <div class="flex relative items-center h-full py-0 px-12">
+            <div class="flex flex-auto ml-20">
+               <h1 class="text-3xl">Mardraft<span class="text-orange-400">Cinema</span></h1>
             </div>
-            <div class="nav-list-container">
-                <ul class="nav-list">
-                    <li class="nav-item">Movies</li>
-                    <li class="nav-item">Series</li>
-                    <li class="nav-item">Popular</li>
-                    <li class="nav-item">Bestsellers</li>
+            <div class="flex-auto">
+                <ul class="flex list-none text-base">
+                    <li class="mr-7">Movies</li>
+                    <li class="mr-7">Series</li>
+                    <li class="mr-7">Popular</li>
+                    <li class="mr-7">Bestsellers</li>
                 </ul>
             </div>
-            <div class="profile-container">
-                <img class="profile-picture" src="pictures/profile-picture.jpg" alt="profile-picture" />
-                    <div class="profile-name-container">
-                        <span class="profile-name">Profile</span>
+            <div class="flex flex-auto items-center justify-end">
+                <img class="w-9 h-9 rounded-md object-fill" src="pictures/profile-picture.jpg" alt="profile-picture" />
+                    <div class="mx-6">
+                        <span class="text-base">Profile</span>
                         <i class="fa-solid fa-sort-down"></i>
                     </div>
-                    <div class="toggle">
-                        <i class="fa-solid fa-moon toggle-icon"></i>
-                        <i class="fa-solid fa-sun toggle-icon"></i>
-                        <div class="toggle-ball"></div>
+                    <div class="w-10 h-5 rounded-full flex items-center relative justify-around bg-white">
+                        <i class="fa-solid fa-moon text-orange-400"></i>
+                        <i class="fa-solid fa-sun text-orange-400"></i>
+                        <div class="w-4 h-4 bg-black absolute rounded-full cursor-pointer right-1"></div>
 
                     </div>
             </div>
         </div>
     </div>
-    <div class="sidebar">
-            <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
-            <i class="left-menu-icon fa-solid fa-house"></i>
-            <i class="left-menu-icon fa-solid fa-users"></i>
-            <i class="left-menu-icon fa-solid fa-bookmark"></i>
-            <i class="left-menu-icon fa-solid fa-tv"></i>
-            <i class="left-menu-icon fa-solid fa-hourglass-start"></i>
-            <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    <div class="fixed w-20 h-full flex items-center flex-col top-0 pt-36 text-2xl bg-zinc-800">
+            <i class="left-menu-icon fa-solid fa-magnifying-glass mb-10 cursor-pointer"></i>
+            <i class="left-menu-icon fa-solid fa-house mb-10 cursor-pointer"></i>
+            <i class="left-menu-icon fa-solid fa-users mb-10 cursor-pointer"></i>
+            <i class="left-menu-icon fa-solid fa-bookmark mb-10 cursor-pointer"></i>
+            <i class="left-menu-icon fa-solid fa-tv mb-10 cursor-pointer"></i>
+            <i class="left-menu-icon fa-solid fa-hourglass-start mb-10 cursor-pointer"></i>
+            <i class="left-menu-icon fa-solid fa-cart-shopping mb-10 cursor-pointer"></i>
     </div>
 
-         <div class="main-container">
-            <div class="content-container">
-                <div class="featured-content w-16 md:w-32 lg:w-48"
+         <div class="bg-black">
+            <div class="ml-12">
+                <div class="featured-content"
                 style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #070707 ),  url('pictures/dark-pic.jpg'); ">
-                    <div class="featured-title">
+                    <div class=" text-gray w-2/5 pl-32 pt-44 text-base">
                         The mystery-drama series introduces an intricate puzzle filled with twists that includes a web of curious characters, all of whom have a connection to the town's troubled history -- whether they know it or not.
                     </div>
-                    <button class="featured-button"> Watch Now </button>
+                    <button class="ml-32 mt-8 py-3 px-5 text-base cursor-pointer border-2 rounded-md hover:bg-orange-400  hover:border-orange-400 transition-all"> Watch Now </button>
                 </div>
-                <div class="movie-list-container"> 
-                    <h2 class="movie-list-title"> NEW RELEASES </h2>
-                    <div class="movie-list-wrapper">
-                        <div class="movie-list">
-                            <div class="movie-list-item">
-                                <img src="/pictures/Fight Club.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Fight Club</h4>
+                <div class="p-8"> 
+                    <h2 class="pt-20 pl-12 pb-6 text-2xl"> NEW RELEASES </h2>
+                    <div class="overflow-hidden">
+                        <div class="flex items-center relative">
+                            <div class="ml-12">
+                                <img src="/pictures/Fight Club.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Fight Club</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/forrest-gump.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Forrest Gump</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/forrest-gump.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Forrest Gump</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Gladiator.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Gladiator</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Gladiator.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Gladiator</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Inception.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Inception</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Inception.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Inception</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Inglourious Basterds.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Inglourious Basterds</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Inglourious Basterds.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Inglourious Basterds</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Parasite.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Parasite</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Parasite.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Parasite</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/The Green Mile.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> The Green Mile</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/The Green Mile.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> The Green Mile</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Fight Club.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Fight Club</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Fight Club.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Fight Club</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Fight Club.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Fight Club</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Fight Club.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Fight Club</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Fight Club.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Fight Club</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Fight Club.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Fight Club</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Fight Club.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Fight Club</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Fight Club.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Fight Club</h4>
                             </div>
-                            <div class="movie-list-item">
-                                <img src="/pictures/Fight Club.jpg" alt="" class="movie-img">
-                                <h4 class="movie-title"> Fight Club</h4>
+                            <div class="ml-12">
+                                <img src="/pictures/Fight Club.jpg" alt="" class="flex items-center max-w-fit cursor-pointer border-4 rounded-sm hover:border-orange-400 transition-all">
+                                <h4 class="flex items-center py-4 justify-center"> Fight Club</h4>
                             </div>
-                            <i class="fa-solid fa-chevron-right movie-arrow"></i>
+                            <i class="fa-solid fa-chevron-right absolute text-8xl top-12 right-0 opacity-50 cursor-pointer text-neutral400"></i>
                             </div>
                     </div>
                  </div> 
